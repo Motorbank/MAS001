@@ -24,7 +24,7 @@ MAS-001을 통해 제어할 수 있는 드라이버는 다음과 같습니다. �
 
 ### Block Diagram
 
-<img src="assets/block_diagram.jpg">
+<img src="assets/block_diagram.jpg" height="500px">
 
 
 ### How To Start
