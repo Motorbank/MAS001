@@ -1,10 +1,10 @@
-#include "dlc200.h"
+#include "blc200.h"
 #include <SoftwareSerial.h>
 #include <string.h>
 
 SoftwareSerial dlc485(RS485_RX, RS485_TX);
 
-DLC200::DLC200(uint16_t baudrate, long timeout = 1000){
+BLC200::BLC200(uint16_t baudrate, long timeout = 1000){
 	sendframe[0] = 0xFF;
 	sendframe[1] = 0xFE;
 
@@ -14,7 +14,7 @@ DLC200::DLC200(uint16_t baudrate, long timeout = 1000){
 	RS485_DIS;
 }
 
-void DLC200::set_PositionWithSpeed(uint8_t ID, uint8_t CW, uint16_t POS, uint16_t SPD){
+void BLC200::set_PositionWithSpeed(uint8_t ID, uint8_t CW, uint16_t POS, uint16_t SPD){
 	// Create frame
 	sendframe[2] = ID;
 	sendframe[3] = 0x07;
@@ -31,7 +31,7 @@ void DLC200::set_PositionWithSpeed(uint8_t ID, uint8_t CW, uint16_t POS, uint16_
 	transmitReceive(false);
 }
 
-void DLC200::set_PositionWithTime(uint8_t ID, uint8_t CW, uint16_t POS, uint8_t TIME){
+void BLC200::set_PositionWithTime(uint8_t ID, uint8_t CW, uint16_t POS, uint8_t TIME){
 	// Create frame
 	sendframe[2] = ID;
 	sendframe[3] = 0x06;
@@ -47,7 +47,7 @@ void DLC200::set_PositionWithTime(uint8_t ID, uint8_t CW, uint16_t POS, uint8_t 
 	transmitReceive(false);
 }
 
-void DLC200::set_SpeedWithTime(uint8_t ID, uint8_t CW, uint16_t SPD, uint8_t TIME){
+void BLC200::set_SpeedWithTime(uint8_t ID, uint8_t CW, uint16_t SPD, uint8_t TIME){
 	// Create frame
 	sendframe[2] = ID;
 	sendframe[3] = 0x06;
@@ -63,7 +63,7 @@ void DLC200::set_SpeedWithTime(uint8_t ID, uint8_t CW, uint16_t SPD, uint8_t TIM
 	transmitReceive(false);
 }
 
-void DLC200::set_FactorySetting(uint8_t ID){
+void BLC200::set_FactorySetting(uint8_t ID){
 	// Create frame
 	sendframe[2] = ID;
 	sendframe[3] = 0x02;
@@ -75,7 +75,7 @@ void DLC200::set_FactorySetting(uint8_t ID){
 	transmitReceive(false);
 }
 
-bool DLC200::get_Feedback(uint8_t ID, uint8_t Mode){
+bool BLC200::get_Feedback(uint8_t ID, uint8_t Mode){
 	rx_len = 5;
 	switch(Mode){
 		case 0xA0: rx_len += 1; break;
@@ -104,7 +104,7 @@ bool DLC200::get_Feedback(uint8_t ID, uint8_t Mode){
 	return transmitReceive(true);
 }
 
-void DLC200::getChecksum(){
+void BLC200::getChecksum(){
 	uint8_t i;
 	uint8_t checksum = 0x00;
 	for(i = 2; i < tx_len; i++){
@@ -113,7 +113,7 @@ void DLC200::getChecksum(){
 	sendframe[4] = ~checksum;
 }
 
-bool DLC200::transmitReceive(bool recv){
+bool BLC200::transmitReceive(bool recv){
 	RS485_EN;
 	dlc485.write(sendframe, tx_len);
 	RS485_DIS;

@@ -1,10 +1,10 @@
 #include "mas001.h"
-#include "dlc200.h"
+#include "blc200.h"
 
 #define DEVICE_ID  0
 
 MAS001 myShield;
-DLC200 myDevice(9600, 100); // Baudrate = 9600, Serial timeout = 100ms
+BLC200 myDevice(9600, 100); // Baudrate = 9600, Serial timeout = 100ms
 
 uint8_t set_time;
 uint16_t pos_output;

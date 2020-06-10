@@ -1,5 +1,5 @@
-#ifndef __DLC_200_H__
-#define __DLC_200_H__
+#ifndef __BLC_200_H__
+#define __BLC_200_H__
 
 #include "mas001.h"
 
@@ -7,9 +7,9 @@
 #define RS485_EN	digitalWrite(RS485_DE, HIGH)
 #define RS485_DIS	digitalWrite(RS485_DE, LOW)
 
-class DLC200{
+class BLC200{
 public:
-	DLC200(uint16_t baudrate, long timeout = 1000);
+	BLC200(uint16_t baudrate, long timeout = 1000);
 
 	uint8_t dlcData[BUFF_LEN];
 

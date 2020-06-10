@@ -1,10 +1,10 @@
-#include "dlc200.h"
+#include "blc200.h"
 
-DLC200 myDevice(9600, 100); // Baudrate = 9600, Serial timeout = 100ms
+BLC200 myDevice(9600, 100); // Baudrate = 9600, Serial timeout = 100ms
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Start Scanning DLC driver series...");
+  Serial.println("Start Scanning BLC driver series...");
 }
 
 void loop() {
