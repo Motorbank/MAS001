@@ -1,4 +1,4 @@
-#include "blc-150.h"
+#include "blc150.h"
 
 BLC150::BLC150(){
 	pinMode(EN_PIN, INPUT);

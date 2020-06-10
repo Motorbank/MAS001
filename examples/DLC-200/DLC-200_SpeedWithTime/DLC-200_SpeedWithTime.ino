@@ -1,5 +1,5 @@
-#include "mas-001.h"
-#include "dlc-200.h"
+#include "mas001.h"
+#include "dlc200.h"
 
 #define DEVICE_ID 0
 

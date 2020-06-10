@@ -1,4 +1,4 @@
-#include "dlc-200.h"
+#include "dlc200.h"
 
 DLC200 myDevice(9600, 100); // Baudrate = 9600, Serial timeout = 100ms
 

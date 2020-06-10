@@ -1,4 +1,4 @@
-#include "mas-001.h"
+#include "mas001.h"
 
 MAS001::MAS001(){
 	pinMode(MAS_BTN1, INPUT);

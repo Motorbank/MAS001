@@ -1,7 +1,7 @@
 #ifndef __DLC_200_H__
 #define __DLC_200_H__
 
-#include "mas-001.h"
+#include "mas001.h"
 
 #define BUFF_LEN	16
 #define RS485_EN	digitalWrite(RS485_DE, HIGH)

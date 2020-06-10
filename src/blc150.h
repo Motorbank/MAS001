@@ -1,7 +1,7 @@
 #ifndef __BLC_150_H__
 #define __BLC_150_H__
 
-#include "mas-001.h"
+#include "mas001.h"
 
 #define EN_PIN	6
 #define DIR_PIN	5
