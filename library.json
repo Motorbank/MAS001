@@ -1,0 +1,23 @@
+{
+  "name": "mas-001",
+  "keywords": "json, rest, http, web",
+  "description": "An elegant and efficient JSON library for embedded systems",
+  "homepage": "https://www.motorbank.kr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Motorbank/Arduino_MAS001.git"
+  },
+  "version": "0.0.0",
+  "authors": {
+    "name": "Yongjae Kim",
+    "url": "https://blog.benoitblanchon.fr"
+  },
+  "exclude": [
+    "fuzzing",
+    "scripts",
+    "test",
+    "third-party"
+  ],
+  "frameworks": "arduino",
+  "platforms": "*"
+}
