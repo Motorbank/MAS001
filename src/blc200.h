@@ -11,7 +11,7 @@ class BLC200{
 public:
 	BLC200(uint16_t baudrate, long timeout = 1000);
 
-	uint8_t dlcData[BUFF_LEN];
+	uint8_t blcData[BUFF_LEN];
 
 	// Protocol MC-RS485_V1.0.1
 	void set_PositionWithSpeed(uint8_t ID, uint8_t CW, uint16_t POS, uint16_t SPD);	// 1. 위치, 속도제어 (송신)

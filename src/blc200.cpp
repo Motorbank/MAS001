@@ -221,8 +221,8 @@ bool BLC200::transmitReceive(bool recv){
 	if(readframe[4] != (uint8_t)(~checksum)) return false;
 
 	// Copy data
-	memset(dlcData, 0x00, BUFF_LEN);
-	memcpy(dlcData, readframe + 5, rx_len - 5);
+	memset(blcData, 0x00, BUFF_LEN);
+	memcpy(blcData, readframe + 5, rx_len - 5);
 
 	while(dlc485.available() > 0) dlc485.read(); // Flush buffer 
 

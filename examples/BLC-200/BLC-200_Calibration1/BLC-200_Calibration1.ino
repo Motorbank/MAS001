@@ -30,8 +30,8 @@ void loop() {
 
   if(myDevice.get_Feedback(DEVICE_ID, 0xA6)){
     Serial.print("\t→ Rated Speed [RPM] : ");
-    Serial.print((uint16_t)myDevice.dlcData[1] << 8 | (uint16_t)myDevice.dlcData[2]);
-    if(RATED_SPEED == (uint16_t)myDevice.dlcData[1] << 8 | (uint16_t)myDevice.dlcData[2]) Serial.println("... OK!");
+    Serial.print((uint16_t)myDevice.blcData[1] << 8 | (uint16_t)myDevice.blcData[2]);
+    if(RATED_SPEED == (uint16_t)myDevice.blcData[1] << 8 | (uint16_t)myDevice.blcData[2]) Serial.println("... OK!");
     else{
       Serial.println("...Fail");
       while(1);  
@@ -44,8 +44,8 @@ void loop() {
 
   if(myDevice.get_Feedback(DEVICE_ID, 0xA7)){
     Serial.print("\t→ Sensor Resolution : ");
-    Serial.print((uint16_t)myDevice.dlcData[1] << 8 | (uint16_t)myDevice.dlcData[2]);
-    if(RESOLUTION == (uint16_t)myDevice.dlcData[1] << 8 | (uint16_t)myDevice.dlcData[2]) Serial.println("... OK!");
+    Serial.print((uint16_t)myDevice.blcData[1] << 8 | (uint16_t)myDevice.blcData[2]);
+    if(RESOLUTION == (uint16_t)myDevice.blcData[1] << 8 | (uint16_t)myDevice.blcData[2]) Serial.println("... OK!");
     else{
       Serial.println("...Fail");
       while(1);  
@@ -58,8 +58,8 @@ void loop() {
 
   if(myDevice.get_Feedback(DEVICE_ID, 0xA8)){
     Serial.print("\t→ Reduction Ratio : ");
-    Serial.print((uint16_t)myDevice.dlcData[1] << 8 | (uint16_t)myDevice.dlcData[2]);
-    if(REDUCTION_RATIO == (uint16_t)myDevice.dlcData[1] << 8 | (uint16_t)myDevice.dlcData[2]) Serial.println("... OK!");
+    Serial.print((uint16_t)myDevice.blcData[1] << 8 | (uint16_t)myDevice.blcData[2]);
+    if(REDUCTION_RATIO == (uint16_t)myDevice.blcData[1] << 8 | (uint16_t)myDevice.blcData[2]) Serial.println("... OK!");
     else{
       Serial.println("...Fail");
       while(1);  
@@ -72,8 +72,8 @@ void loop() {
 
   if(myDevice.get_Feedback(DEVICE_ID, 0xAA)){
     Serial.print("\t→ Position Mode : ");
-    Serial.print(myDevice.dlcData[1] == 0 ? "Absolute" : "Relative");
-    if(POSITION_MODE == myDevice.dlcData[1]) Serial.println("... OK!");
+    Serial.print(myDevice.blcData[1] == 0 ? "Absolute" : "Relative");
+    if(POSITION_MODE == myDevice.blcData[1]) Serial.println("... OK!");
     else{
       Serial.println("...Fail");
       while(1);  
@@ -86,8 +86,8 @@ void loop() {
 
   if(myDevice.get_Feedback(DEVICE_ID, 0xAB)){
     Serial.print("\t→ Position Mode : ");
-    Serial.print(myDevice.dlcData[1] == 0 ? "CCW" : "CW");
-    if(POSITION_DIR == myDevice.dlcData[1]) Serial.println("... OK!");
+    Serial.print(myDevice.blcData[1] == 0 ? "CCW" : "CW");
+    if(POSITION_DIR == myDevice.blcData[1]) Serial.println("... OK!");
     else{
       Serial.println("...Fail");
       while(1);  

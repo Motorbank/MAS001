@@ -26,7 +26,7 @@ void loop() {
 
   // Get Current position
   if(myDevice.get_Feedback(DEVICE_ID, 0xA1)){
-    pos_output = (uint16_t)myDevice.dlcData[2] << 8 | (uint16_t)myDevice.dlcData[3];
+    pos_output = (uint16_t)myDevice.blcData[2] << 8 | (uint16_t)myDevice.blcData[3];
     Serial.println(pos_output);
   }
   
