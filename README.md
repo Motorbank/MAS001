@@ -10,7 +10,7 @@
 MAS-001은 다양한 모터 드라이버를 손쉽게 아두이노로 제어할 수 있도록 해주는 중계 기판입니다. 또한 아두이노에서 RS-485 통신을 할 수 있게 확장해 주어, 기존 아두이노에서는 제어할 수 없었던 고성능 드라이버들을 제어할 수 있게 해 줍니다. 모터뱅크에서는 MAS-001과 함께 다양한 샘플 코드를 제공하여 사용자가 빠르게 시스템에 접목시킬 수 있도록 하였습니다.
 
 ### How To Start
-:star2: <a href="https://github.com/Motorbank/MAS001/wiki/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0">시작 안내서 바로가기</a> :star2:
+:star2: <a href="https://github.com/Motorbank/MAS001/wiki/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0">시작 안내서 바로가기</a> :star2:
 
 
 ### Support Drivers
