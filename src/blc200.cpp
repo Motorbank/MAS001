@@ -63,6 +63,90 @@ void BLC200::set_SpeedWithTime(uint8_t ID, uint8_t CW, uint16_t SPD, uint8_t TIM
 	transmitReceive(false);
 }
 
+void BLC200::set_RatedSpeed(uint8_t ID, uint16_t RPM){
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x04;
+	sendframe[5] = 0x09;
+	sendframe[6] = (uint8_t)(RPM >> 8);
+	sendframe[7] = (uint8_t)RPM;	
+
+	tx_len = 8;
+	getChecksum();
+
+	transmitReceive(false);
+}
+
+void BLC200::set_Resolution(uint8_t ID, uint16_t resolution){
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x04;
+	sendframe[5] = 0x0A;
+	sendframe[6] = (uint8_t)(resolution >> 8);
+	sendframe[7] = (uint8_t)resolution;
+
+	tx_len = 8;
+	getChecksum();
+
+	transmitReceive(false);
+}
+
+void BLC200::set_ReductionRatio(uint8_t ID, uint16_t reductionRatio){
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x04;
+	sendframe[5] = 0x0B;
+	sendframe[6] = (uint8_t)(reductionRatio >> 8);
+	sendframe[7] = (uint8_t)reductionRatio;
+
+	tx_len = 8;
+	getChecksum();
+
+	transmitReceive(false);
+}
+
+void BLC200::set_PositionMode(uint8_t ID, uint8_t MODE){
+	if(MODE != 0x00 && MODE != 0x01) return;
+
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x03;
+	sendframe[5] = 0x0D;
+	sendframe[6] = MODE;
+
+	tx_len = 7;
+	getChecksum();
+
+	transmitReceive(false);	
+}
+
+void BLC200::set_PositionDirection(uint8_t ID, uint8_t DIR){
+	if(DIR != 0x00 && DIR != 0x01) return;
+
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x03;
+	sendframe[5] = 0x0E;
+	sendframe[6] = DIR;
+
+	tx_len = 7;
+	getChecksum();
+
+	transmitReceive(false);	
+}
+
+void BLC200::set_PositionInit(uint8_t ID){
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x02;
+	sendframe[5] = 0x0F;
+
+	tx_len = 6;
+	getChecksum();
+
+	transmitReceive(false);	
+}
+
 void BLC200::set_FactorySetting(uint8_t ID){
 	// Create frame
 	sendframe[2] = ID;
