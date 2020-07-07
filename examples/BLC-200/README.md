@@ -24,3 +24,6 @@ BLC 모터 드라이버와 MAS-001 쉴드는 다음과 같이 연결됩니다. (
 | [**BLC-200_SpeedWithConsole**](./BLC-200_SpeedWithConsole) | 시리얼 통신을 통해 속도를 제어하는 예제입니다. |
 | [**BLC-200_SpeedWithTime**](./BLC-200_SpeedWithTime) | 속도 도달 시간을 이용한 속도 제어 예제입니다. (가감속 속도제어) |
 | [**BLC-200_LiveDemo**](./BLC-200_LiveDemo) | 테스트 구동 예제입니다. ([영상 참고](https://www.youtube.com/watch?v=O-PHxIAoegs&feature=emb_title))
+
+### API Guide
+:star2: [API 가이드 보기](./BLC200.md) :star2:
