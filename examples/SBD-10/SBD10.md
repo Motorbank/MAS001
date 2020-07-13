@@ -24,7 +24,7 @@ void continuousPulse(uint16_t pulse_us);
 ```
 * **description** : STP 핀으로 일정 폭의 펄스를 지속적으로 발생시킵니다.
 * **arguments** :
-  * pulse_us : 펄스의 폭을 microsecond 단위로 설정합니다.
+  * pulse_us : 펄스의 폭을 microsecond 단위로 설정합니다. (0 ~ 16383)
 
 <img src="assets/pulse1.png" height="200px">
 
@@ -33,7 +33,7 @@ void burstPulse(uint16_t pulse_us, uint32_t cnt = 0);
 ```
 * **description** : STP 핀으로 특정 폭의 펄스를 특정 값 만큼 발생시킵니다.
 * **arguments** :
-  * pulse_us : 펄스의 폭을 microsecond 단위로 설정합니다.
-  * cnt : 발생시킬 펄스 갯수.
+  * pulse_us : 펄스의 폭을 microsecond 단위로 설정합니다. (0 ~ 16383)
+  * cnt : 발생시킬 펄스 갯수. (0 ~ 65535)
 
 <img src="assets/pulse2.png" height="200px">
