@@ -1,5 +1,8 @@
 #include "blc150.h"
 
+#define EN_PIN	6
+#define DIR_PIN	5
+
 BLC150::BLC150(){
 	pinMode(EN_PIN, INPUT);
 	pinMode(DIR_PIN, INPUT);

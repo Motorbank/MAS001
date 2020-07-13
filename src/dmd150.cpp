@@ -1,5 +1,9 @@
 #include "dmd150.h"
 
+#define IN1_PIN	5
+#define IN2_PIN	6
+#define PWM_PIN	9
+
 DMD150::DMD150(){
 	pinMode(IN1_PIN, OUTPUT);
 	pinMode(IN2_PIN, OUTPUT);

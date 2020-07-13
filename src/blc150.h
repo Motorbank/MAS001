@@ -3,9 +3,6 @@
 
 #include "mas001.h"
 
-#define EN_PIN	6
-#define DIR_PIN	5
-
 class BLC150{
 public:
 	BLC150();

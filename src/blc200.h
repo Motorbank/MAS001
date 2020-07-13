@@ -4,8 +4,6 @@
 #include "mas001.h"
 
 #define BUFF_LEN	16
-#define RS485_EN	digitalWrite(RS485_DE, HIGH)
-#define RS485_DIS	digitalWrite(RS485_DE, LOW)
 
 class BLC200{
 public:
