@@ -20,3 +20,6 @@ SBD-10 계열 모터 드라이버를 연동하는 예제입니다. 자세한 내
 |-----------|----------------------|
 | [**SBD-10_burstPulse**](./SBD-10_burstPulse) | 펄스 갯수를 조절하여 스텝 모터를 제어하는 예제입니다. |
 | [**SBD-10_LiveDemo**](./SBD-10_LiveDemo) | 테스트 구동 예제입니다. ([영상 참고](https://youtu.be/xBoSLNzYCj8)) |
+
+### API Guide
+:star2: [API 가이드 보기](./SBD10.md) :star2:
