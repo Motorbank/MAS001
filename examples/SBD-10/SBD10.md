@@ -26,7 +26,7 @@ void continuousPulse(uint16_t pulse_us);
 * **arguments** :
   * pulse_us : 펄스의 폭을 microsecond 단위로 설정합니다.
 
-<img src="assets/pulse1.png" height="400px">
+<img src="assets/pulse1.png" height="200px">
 
 ```c
 void burstPulse(uint16_t pulse_us, uint32_t cnt = 0);
@@ -36,4 +36,4 @@ void burstPulse(uint16_t pulse_us, uint32_t cnt = 0);
   * pulse_us : 펄스의 폭을 microsecond 단위로 설정합니다.
   * cnt : 발생시킬 펄스 갯수.
 
-<img src="assets/pulse2.png" height="400px">
+<img src="assets/pulse2.png" height="200px">
