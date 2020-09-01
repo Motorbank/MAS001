@@ -19,7 +19,7 @@ MAS-001을 통해 제어할 수 있는 드라이버는 다음과 같습니다. �
 | 예제파일 |  지원 드라이버 |
 |-----------|:----------------------:|
 | [**SBD-10**](./examples/SBD-10)    | [SBD-10][1], [SBD-11][2], [MSD-221][3] |
-| [**BLC-150**](./examples/BLC-150)   | [BLC-150][4] |
+| [**BLC-150**](./examples/BLC-150)   | [BLC-150][4], [BLB-160][8] |
 | [**BLC-200**](./examples/BLC-200)   | [BLC-200][5], [BLC-400R4E][6] |
 | [**DMD-150**](./examples/DMD-150) | [DMD-150][7]
 
@@ -30,6 +30,7 @@ MAS-001을 통해 제어할 수 있는 드라이버는 다음과 같습니다. �
 [5]:https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000007964
 [6]:https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000009836
 [7]:https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000009128
+[8]:https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000009614
 
 ### Block Diagram
 

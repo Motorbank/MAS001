@@ -4,19 +4,14 @@
 #define DIR_PIN	5
 
 BLC150::BLC150(){
-	pinMode(EN_PIN, INPUT);
-	pinMode(DIR_PIN, INPUT);
+	pinMode(EN_PIN, OUTPUT);
+	pinMode(DIR_PIN, OUTPUT);
 }
 
-void BLC150::turnOn(){
-	digitalWrite(EN_PIN, HIGH);
+void BLC150::enable(uint8_t value){
+	digitalWrite(EN_PIN, value);
 }
 
-void BLC150::turnOff(){
-	digitalWrite(EN_PIN, LOW);
-}
-
-void BLC150::changeDirection(uint8_t dir){
-	if(dir == 1) digitalWrite(DIR_PIN, HIGH);
-	else if(dir == 0) digitalWrite(DIR_PIN, LOW);
+void BLC150::direction(uint8_t value){
+	digitalWrite(DIR_PIN, value);
 }

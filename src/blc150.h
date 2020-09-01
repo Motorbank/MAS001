@@ -6,10 +6,9 @@
 class BLC150{
 public:
 	BLC150();
-	
-	void turnOn();
-	void turnOff();
-	void changeDirection(uint8_t dir);
+
+	void enable(uint8_t value);
+	void direction(uint8_t value);
 };
 
 #endif
