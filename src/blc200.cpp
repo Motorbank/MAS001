@@ -50,6 +50,19 @@ void BLC200::set_PositionWithTime(uint8_t ID, uint8_t CW, uint16_t POS, uint8_t 
 	transmitReceive(false);
 }
 
+void BLC200::set_ID(uint8_t ID, uint8_t target_ID){
+	// Create frame
+	sendframe[2] = ID;
+	sendframe[3] = 0x03;
+	sendframe[5] = 0x06;
+	sendframe[6] = target_ID;
+
+	tx_len = 7;
+	getChecksum();
+
+	transmitReceive(false);
+}
+
 void BLC200::set_SpeedWithTime(uint8_t ID, uint8_t CW, uint16_t SPD, uint8_t TIME){
 	// Create frame
 	sendframe[2] = ID;

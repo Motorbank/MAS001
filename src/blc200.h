@@ -17,7 +17,7 @@ public:
 	void set_SpeedWithTime(uint8_t ID, uint8_t CW, uint16_t SPD, uint8_t TIME);	// 3. 가감속 속도제어 (송신)
 	//void set_PositionController(); 		// 4. 위치제어기 설정 (송신)
 	//void set_SpeedController(); 		// 5. 속도제어기 설정 (송신)
-	//void set_ID(); 						// 6. ID 설정 (송신)
+	void set_ID(uint8_t ID, uint8_t target_ID); // 6. ID 설정 (송신)
 	//void set_Buadrate(); 				// 7. 통신속도 설정 (송신)
 	//void set_ResponseTime(); 			// 8. 통신 응답시간 설정 (송신)
 	void set_RatedSpeed(uint8_t ID, uint16_t RPM);	// 9. 모터 정격속도 설정 (송신)
