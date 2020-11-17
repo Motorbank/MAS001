@@ -12,10 +12,21 @@ void setup() {
 
 void loop() {
 
-  myDevice.set_ID(ID, ID_TARGET);
-  delay(500);
-  if(myDevice.get_Feedback(ID_TARGET, 0xA0)) Serial.println("Success!");
-  else Serial.println("Fail to change id..");
+  if(myDevice.get_Feedback(ID, 0xA0)){
+  	Serial.println("There is no target device! Error..");
+  }else{
+  	myDevice.set_ID(ID, ID_TARGET);
+    Serial.println("ID change command sended!. Please Turn the power of and on!");
+  }
 
-  while(1);
+  while(1){
+
+  	delay(1000);
+  	Serial.print(".");
+  	if(myDevice.get_Feedback(ID_TARGET, 0xA0)){
+  		Serial.print("Success!");
+  		while(1);
+  	}
+  	
+  }
 }
