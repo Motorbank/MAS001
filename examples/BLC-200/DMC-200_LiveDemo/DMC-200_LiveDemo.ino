@@ -35,7 +35,9 @@ void setup() {
 
 void loop() {
   pos_input = myShield.getPot() * 64; // 1024 to 65536
-  if(myShield.button2Clicked()){
+  if(myShield.button1Clicked()){
+    myDevice.set_PositionWithSpeed(DEVICE_ID, 1, pos_input, rated_speed * 10);
+  }else if(myShield.button2Clicked()){
     myDevice.set_PositionWithSpeed(DEVICE_ID, 1, 0, rated_speed * 10);
   }else{
     myDevice.set_PositionWithSpeed(DEVICE_ID, 0, pos_input, rated_speed * 10);
