@@ -1,5 +1,36 @@
 # API Document
 
+## SBD14_INSTANCE
+```c
+typedef struct{
+
+  uint8_t id; // 모터 id
+
+  {
+    bool direction; // 모터 회전속도 세팅
+
+    bool opt1_enable; // 포토 커플러 1 활성화 세팅
+    bool opt1_stop_on_high; // 포토 커플러 1 정지 레벨 세팅
+
+    bool opt2_enable; // 포토 커플러 2 활성화 세팅
+    bool opt2_stop_on_high; // 포토 커플러 2 정지 레벨 세팅
+
+    uint16_t speed; // 속도 세팅
+    uint32_t position  // 위치 세팅
+
+  } settings;
+
+  {
+    bool abnormal; // 비정상 표시
+    bool opt1; // 포토 커플러 1 상태 표시
+    bool opt2; // 포토 커플러 2 상태 표시
+    uint16_t speed; // 속도 세팅 값 표시
+  } state;
+
+}SBD14_INSTANCE;
+```
+
+## API Functions
 ```c
 bool set_ID(SBD14_INSTANCE *motor, uint8_t target_id);
 ```
