@@ -32,5 +32,5 @@ BDD-240 계열의 모터 드라이버를 연동하는 예제입니다. 자세한
 
 | Example | Description  |
 |-----------|----------------------|
-| [**BDD-240_Basic**](./BDD-240_Basic) | 기본 예제입니다. |
+| [**BDD-240_Basic**](./BDD-240_basic) | 기본 예제입니다. |
 | [**BDD-240_LiveDemo**](./BDD-240_LiveDemo) | BDD-240 + BL10057 구동 예제입니다. |

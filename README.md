@@ -23,7 +23,7 @@ MAS-001을 통해 제어할 수 있는 드라이버는 다음과 같습니다. �
 | [**BLC-200**](./examples/BLC-200)   | [BLC-200][5], [BLC-400R4E][6], [DMC-200][9] |
 | [**DMD-150**](./examples/DMD-150) | [DMD-150][7] |
 | [**SBD-14**](./examples/SBD-14) | [SBD-14][10] |
-| [**BDD-240**](./exampleS/BDD-240) | [BDD-240][11], [BDD-480][12] |
+| [**BDD-240**](./examples/BDD-240) | [BDD-240][11], [BDD-480][12] |
 
 [1]:https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000007838
 [2]:https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000009130
