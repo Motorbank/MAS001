@@ -1,6 +1,4 @@
-## MAS-001 (Motorbank Arduino Shield 001) [Preview]
-
-***현재 MAS-001 아두이노 라이브러리는 초기 개발중이며, 아직 테스트 단계이므로 이 점 참고하시기 바랍니다.***
+## MAS-001 (Motorbank Arduino Shield 001)
 
 <img src="assets/pcb.jpg" height="400px">
 
